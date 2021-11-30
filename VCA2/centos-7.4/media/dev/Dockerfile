@@ -1,5 +1,5 @@
 
-FROM centos:7.4.1708 AS build
+FROM centos:centos7 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -511,7 +511,7 @@ RUN cd /home/FFmpeg && \
 
 
 
-FROM centos:7.4.1708
+FROM centos:centos7
 LABEL Description="This is the image for FFMPEG and GSTREAMER application development on CentOS 7.4"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
