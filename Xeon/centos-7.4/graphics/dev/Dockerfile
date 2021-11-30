@@ -1,5 +1,5 @@
 
-FROM centos:7.4.1708 AS build
+FROM centos:centos7 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
