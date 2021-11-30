@@ -1,5 +1,5 @@
 
-FROM centos:7.4.1708 AS build
+FROM centos:centos7 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -275,7 +275,7 @@ RUN rm -rf /home/build/usr/include && \
     rm -rf /home/build/usr/local/share/man && \
     find /home/build -name "*.a" -exec rm -f {} \;
 
-FROM centos:7.4.1708
+FROM centos:centos7
 LABEL Description="This is the base image for FFMPEG CentOS 7.4"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
