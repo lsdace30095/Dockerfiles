@@ -1,5 +1,5 @@
 
-FROM centos:7.5.1804 AS build
+FROM centos:7.9.2009 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -34,7 +34,7 @@ include(gst-plugin-vaapi.m4)
 include(ffmpeg.m4)
 include(cleanup.m4)dnl
 
-FROM centos:7.5.1804
+FROM centos:7.9.2009
 LABEL Description="This is the image for FFMPEG and GSTREAMER application development on CentOS 7.5"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
