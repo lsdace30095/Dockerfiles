@@ -1,5 +1,5 @@
 
-FROM centos:7.4.1708 AS build
+FROM centos:7.9.2009 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -467,7 +467,7 @@ RUN rm -rf /home/build/usr/include && \
     rm -rf /home/build/usr/local/share/man && \
     find /home/build -name "*.a" -exec rm -f {} \;
 
-FROM centos:7.4.1708
+FROM centos:7.9.2009
 LABEL Description="This is the base image for GStreamer CentOS 7.4"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
