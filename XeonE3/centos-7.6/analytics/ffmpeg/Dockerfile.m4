@@ -1,5 +1,5 @@
 
-FROM centos:7.6.1810 AS build
+FROM centos:7.9.2009 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -31,7 +31,7 @@ include(ffmpeg.m4)
 OPENCV_REMAKE_VIDEOIO()
 include(cleanup.m4)dnl
 
-FROM centos:7.6.1810
+FROM centos:7.9.2009
 LABEL Description="This is the base image for FFMPEG & DLDT CentOS 7.6"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
