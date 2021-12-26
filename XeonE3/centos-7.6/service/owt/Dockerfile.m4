@@ -1,5 +1,5 @@
 
-FROM centos:7.6.1810 AS build
+FROM centos:7.9.2009 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -18,7 +18,7 @@ include(media-driver.m4)
 include(media-sdk.m4)
 include(owt.m4)dnl
 
-FROM centos:7.6.1810
+FROM centos:7.9.2009
 LABEL Description="This is the image for owt development on CentOS 7.6"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
