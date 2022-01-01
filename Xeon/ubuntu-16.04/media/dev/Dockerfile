@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04 AS build
+FROM ubuntu:xenial-20210416 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -420,7 +420,7 @@ RUN cd /home/FFmpeg && \
 
 
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210416
 LABEL Description="This is the base image for FFMPEG & GStreamer for Media Development on Ubuntu 16.04 LTS"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
