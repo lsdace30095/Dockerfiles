@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04 AS build
+FROM ubuntu:xenial-20210416 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
