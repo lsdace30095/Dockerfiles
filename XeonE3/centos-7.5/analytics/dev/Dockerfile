@@ -1,5 +1,5 @@
 
-FROM centos:7.5.1804 AS build
+FROM centos:centos7.9.2009 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -805,7 +805,7 @@ RUN cd opencv-${OPENCV_VER}/build && \
     cp -f ../../lib/libopencv_videoio.so.${OPENCV_VER} /home/build/usr/local/lib
 
 
-FROM centos:7.5.1804
+FROM centos:centos7.9.2009
 LABEL Description="This is the image for FFMPEG,GSTREAMER & DLDT application for analytics development on CentOS 7.5"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
