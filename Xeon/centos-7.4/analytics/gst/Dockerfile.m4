@@ -1,5 +1,5 @@
 
-FROM centos:7.4.1708 AS build
+FROM centos:centos7.9.2009 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -30,7 +30,7 @@ include(dldt-ie.m4)
 include(gst-plugin-gva.m4)
 include(cleanup.m4)dnl
 
-FROM centos:7.4.1708
+FROM centos:centos7.9.2009
 LABEL Description="This is the image for DLDT and GSTREAMER on CentOS 7.4"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
