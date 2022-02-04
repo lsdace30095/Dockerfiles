@@ -1,5 +1,5 @@
 
-FROM centos:7.5.1804 AS build
+FROM centos:centos7.9.2009 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -34,7 +34,7 @@ include(ffmpeg.m4)
 OPENCV_REMAKE_VIDEOIO()
 include(cleanup.m4)dnl
 
-FROM centos:7.5.1804
+FROM centos:centos7.9.2009
 LABEL Description="This is the image for FFMPEG and GSTREAMER application for analytics development on CentOS 7.5"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
