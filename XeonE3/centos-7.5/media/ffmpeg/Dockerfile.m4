@@ -1,5 +1,5 @@
 
-FROM centos:7.5.1804 AS build
+FROM centos:7 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -25,7 +25,7 @@ include(media-sdk.m4)
 include(ffmpeg.m4)
 include(cleanup.m4)dnl
 
-FROM centos:7.5.1804
+FROM centos:7
 LABEL Description="This is the base image for FFMPEG CentOS 7.5"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
