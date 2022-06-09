@@ -1,5 +1,5 @@
 
-FROM centos:7.6.1810 AS build
+FROM centos:centos7 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -15,7 +15,7 @@ include(nodetools.m4)
 include(svt-hevc.m4)
 include(owt-immersive.m4)dnl
 
-FROM centos:7.6.1810
+FROM centos:centos7
 LABEL Description="This is the image for owt development on CentOS 7.6"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
