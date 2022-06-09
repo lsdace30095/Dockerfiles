@@ -1,5 +1,5 @@
 
-FROM centos:7.6.1810 AS build
+FROM centos:centos7 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -293,7 +293,7 @@ RUN git config --global user.email "you@example.com" && \
     cd ${SERVER_PATH} && export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig && ./scripts/build.js -t mcu-all -r -c && \
     ./scripts/pack.js -t all --install-module --no-pseudo --sample-path /home/owt-client-javascript/dist/samples/conference
 
-FROM centos:7.6.1810
+FROM centos:centos7
 LABEL Description="This is the image for owt development on CentOS 7.6"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
