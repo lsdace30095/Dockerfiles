@@ -1,5 +1,5 @@
 
-FROM centos:7.5.1804 AS build
+FROM centos:centos7 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -31,7 +31,7 @@ include(gst-plugin-svt.m4)
 include(gst-plugin-vaapi.m4)
 include(cleanup.m4)dnl
 
-FROM centos:7.5.1804
+FROM centos:centos7
 LABEL Description="This is the base image for GStreamer CentOS 7.5"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
