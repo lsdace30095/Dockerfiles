@@ -1,5 +1,5 @@
 
-FROM centos:7.6.1810 AS build
+FROM centos:centos7 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -713,7 +713,7 @@ RUN rm -rf /home/build/usr/include && \
     rm -rf /home/build/usr/local/share/man && \
     find /home/build -name "*.a" -exec rm -f {} \;
 
-FROM centos:7.6.1810
+FROM centos:centos7
 LABEL Description="This is the image for DLDT & GStreamer & Video Analytic GST Plugin development on CentOS 7.5"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
