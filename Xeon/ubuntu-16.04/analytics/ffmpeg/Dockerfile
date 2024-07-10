@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04 AS build
+FROM ubuntu:xenial-20201014 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -388,7 +388,7 @@ RUN rm -rf /home/build/usr/include && \
     rm -rf /home/build/usr/local/share/man && \
     find /home/build -name "*.a" -exec rm -f {} \;
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20201014
 LABEL Description="This is the base image for FFMPEG & DLDT Ubuntu 16.04 LTS"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
