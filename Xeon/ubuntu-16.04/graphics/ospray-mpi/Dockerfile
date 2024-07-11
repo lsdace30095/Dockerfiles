@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04 AS build
+FROM ubuntu:xenial-20201014 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
