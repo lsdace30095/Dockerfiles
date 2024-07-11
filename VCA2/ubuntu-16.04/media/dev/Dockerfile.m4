@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04 AS build
+FROM ubuntu:xenial-20201014 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -33,7 +33,7 @@ include(gst-plugin-vaapi.m4)
 include(ffmpeg.m4)
 include(cleanup.m4)dnl
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20201014
 LABEL Description="This is the base image for developing FFMPEG and GStreamer applications based on Ubuntu 16.04 LTS"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
