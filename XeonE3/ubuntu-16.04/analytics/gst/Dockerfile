@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04 AS build
+FROM ubuntu:xenial-20210416 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -726,7 +726,7 @@ RUN rm -rf /home/build/usr/include && \
     rm -rf /home/build/usr/local/share/man && \
     find /home/build -name "*.a" -exec rm -f {} \;
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210416
 LABEL Description="This is the base image for GSTREAMER & DLDT Ubuntu 16.04 LTS"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
