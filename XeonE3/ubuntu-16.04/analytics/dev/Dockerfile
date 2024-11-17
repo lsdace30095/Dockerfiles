@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04 AS build
+FROM ubuntu:xenial-20210114 AS build
 WORKDIR /home
 
 # COMMON BUILD TOOLS
@@ -803,7 +803,7 @@ RUN cd opencv-${OPENCV_VER}/build && \
     cp -f ../../lib/libopencv_videoio.so.${OPENCV_VER} /home/build/usr/local/lib
 
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210114
 LABEL Description="This is the base image for developing DLDT, FFMPEG and GStreamer applications for analytics based on Ubuntu 16.04 LTS"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
