@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.04 AS build
+FROM ubuntu:xenial-20210114 AS build
 WORKDIR /home
 define(`BUILD_LINKAGE',shared)dnl
 
@@ -25,7 +25,7 @@ include(ffmpeg.m4)
 OPENCV_REMAKE_VIDEOIO()
 include(cleanup.m4)dnl
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210114
 LABEL Description="This is the base image for FFMPEG & DLDT Ubuntu 16.04 LTS"
 LABEL Vendor="Intel Corporation"
 WORKDIR /home
